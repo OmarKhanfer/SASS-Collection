@@ -1,15 +1,11 @@
 SASS-Collection
 ----------------------
 
-This is a sass ready files will help you to startup your project.
-and the following is as index for the content for each file:
+<h3>1 - Introduction</3>
+-------------------------
+This file has a group of basic mixins will help you to start your project such as margin, padding, floating, aligment...etc.
 
-1- Basic Mixin:
-   - clip: rect
-   - margin
-   - Padding
-   - Floating
-   - Aligment
-   - Directions
-   - Borders
-   - Clear
+<h3>2- License</h3>
+--------------------------
+<a href="http://opensource.org/licenses/mit-license.php" target='_blank'>MIT License</a>
+
