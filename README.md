@@ -1,7 +1,7 @@
 SASS-Collection
 ----------------------
 
-<h3>1 - Introduction</3>
+<h3>1 - Introduction</h3>
 -------------------------
 This file has a group of basic mixins will help you to start your project such as margin, padding, floating, aligment...etc.
 
