@@ -18,7 +18,7 @@
 //------------------------------------------ 
 //	2- margin:
 //		2.1	Margin
-//		2.2 Margin-Right
+//		2.2 	Margin-Right
 //		2.3	Margin-Left
 //------------------------------------------ 
 //	3- Padding:
@@ -123,7 +123,7 @@
 // $val: margin from $right, 
 // ----------------------------------------------
    @mixin margin-right($val) {
-		margin-#{right}:						$val;
+		margin-#{$right}:						$val;
    }
 
 // 2.3- margin-left
@@ -131,7 +131,7 @@
 // $val: margin from $left, 
 // ----------------------------------------------
 @mixin margin-left($val) {
-	margin-#{left}:								$val;
+	margin-#{$left}:								$val;
 }
 
 // 3- Padding:
