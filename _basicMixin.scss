@@ -18,7 +18,7 @@
 //------------------------------------------ 
 //	2- margin:
 //		2.1	Margin
-//		2.2 	Margin-Right
+//		2.2 Margin-Right
 //		2.3	Margin-Left
 //------------------------------------------ 
 //	3- Padding:
@@ -110,7 +110,7 @@
 // $val4: margin from $left.
 // ----------------------------------------------
 	@mixin margin($val1, $val2,$val3,$val4) {
-		@if($left==left){
+		@if($left == left) {
 			margin:$val1 $val2 $val3 $val4;
 		}
 		@else {
@@ -123,7 +123,7 @@
 // $val: margin from $right, 
 // ----------------------------------------------
    @mixin margin-right($val) {
-		margin-#{$right}:						$val;
+		margin-#{right}:						$val;
    }
 
 // 2.3- margin-left
@@ -131,7 +131,7 @@
 // $val: margin from $left, 
 // ----------------------------------------------
 @mixin margin-left($val) {
-	margin-#{$left}:								$val;
+	margin-#{left}:								$val;
 }
 
 // 3- Padding:
@@ -143,10 +143,12 @@
 // $val4: padding from $left.
 // ----------------------------------------------
 	@mixin padding($val1, $val2,$val3,$val4) {
-		padding-top:							$val1;
-		padding-bottom:							$val3;
-		padding-#{$right}:						$val2;
-		padding-#{$left}:						$val4;
+		@if($left == left) {
+			padding:$val1 $val2 $val3 $val4;
+		}
+		@else {
+			padding:$val1 $val4 $val3 $val2;
+		}
 	}
 
 // 3.2- Padding-Right
@@ -274,10 +276,12 @@
 // ------------------------------------------
 
 	@mixin border-width($val1,$val2,$val3,$val4) {
-		border-top-width:						$val1;
-		border-bottom-width:						$val3;
-		border-#{$right}-width:						$val2;
-		border-#{$left}-width:						$val4;	
+		@if($left==left) {
+			border-width:$val1 $val2 $val3 $val4;
+		}
+		@else {
+			border-width:$val1 $val4 $val3 $val2;
+		}
 	}
 
 // 7.2.2 Border-Right-Width
@@ -373,7 +377,7 @@
 // $val: 	border-radius 
 // ------------------------------------------
 	@mixin border-radius($val) {
-		-webkit-border-radius:					$	val;
+		-webkit-border-radius:						$val;
 		-moz-border-radius:						$val;
 		-khtml-border-radius:						$val;
 		border-radius:							$val; 
