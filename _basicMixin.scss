@@ -1,6 +1,6 @@
 // ------------------------------------------
-// author: 	Omar Najeeb Khanfer
-// email: 	omar.aljaber@gmail.com
+// author: 	Omar Najeeb Al Jaber
+// email: 	onaljaber@hhoffice.ae
 // ------------------------------------------
 
 // ------------------------------------------
@@ -67,6 +67,8 @@
 //	8-  Clear Directions:
 //	8.1 Clear 
 // ----------------------------------------------
+//  9-  Backgrounds:
+//  9.1 Gradient-Background:
 
 // importing resources 
 // ----------------------------------------------
@@ -400,9 +402,9 @@
 // ------------------------------------------
 	@mixin border-left-radius($val){
 		 border-bottom-#{$left}-radius:					$val;
-		-webkit-border-bottom-#{$left}-radius:				$val;
+		-webkit-border-bottom-#{$left}-radius:			$val;
 		-moz-border-bottom-#{$left}-radius:				$val;
-		-khtml-border-bottom-#{$left}-radius:				$val;
+		-khtml-border-bottom-#{$left}-radius:			$val;
 
 		 border-top-#{$left}-radius:					$val;
 		-webkit-border-top-#{$left}-radius:				$val;
@@ -416,7 +418,7 @@
 // ------------------------------------------
 	@mixin border-top-radius($val){
 		 border-top-#{$right}-radius:					$val;
-		-webkit-border-top-#{$right}-radius:				$val;
+		-webkit-border-top-#{$right}-radius:			$val;
 		-moz-border-top-#{$right}-radius:				$val;
 		-khtml-border-top-#{$right}-radius:				$val;
 
@@ -432,14 +434,14 @@
 // ------------------------------------------
 	@mixin border-bottom-radius($val){
 		 border-bottom-#{$right}-radius:				$val;
-		-webkit-border-bottom-#{$right}-radius: 			$val;
-		-moz-border-bottom-#{$right}-radius:				$val;
-		-khtml-border-bottom-#{$right}-radius: 				$val;
+		-webkit-border-bottom-#{$right}-radius: 		$val;
+		-moz-border-bottom-#{$right}-radius:			$val;
+		-khtml-border-bottom-#{$right}-radius: 			$val;
 
 		 border-bottom-#{$left}-radius:					$val;
-		-webkit-border-bottom-#{$left}-radius:				$val;
+		-webkit-border-bottom-#{$left}-radius:			$val;
 		-moz-border-bottom-#{$left}-radius:				$val;
-		-khtml-border-bottom-#{$left}-radius:				$val;	
+		-khtml-border-bottom-#{$left}-radius:			$val;	
 	}
 
 // 7.5.5 Border-Top-Right-Radius
@@ -447,7 +449,7 @@
 // $val: 	border-radius from top right side
 // ------------------------------------------
 	@mixin border-top-right-radius($val) {
-		 border-top-right-radius:					$val; 
+		 border-top-right-radius:						$val; 
 		-moz-border-radius-topright:					$val;
 		-webkit-border-top-right-radius:				$val; 
 		-khtml-border-top-right-radius:					$val; 
@@ -458,8 +460,8 @@
 // $val: 	border-radius from top left side
 // ------------------------------------------
 	@mixin border-top-left-radius($val) {
-		 border-top-left-radius:					$val; 
-		-moz-border-radius-topleft:					$val;
+		 border-top-left-radius:						$val; 
+		-moz-border-radius-topleft:						$val;
 		-webkit-border-top-left-radius:					$val; 
 		-khtml-border-top-left-radius:					$val; 
 	}
@@ -480,7 +482,7 @@
 // $val: 	border-radius from top left side
 // ------------------------------------------
 	@mixin border-bottom-left-radius($val) {
-		 border-bottom-left-radius:					$val; 
+		 border-bottom-left-radius:						$val; 
 		-moz-border-radius-bottomleft:					$val;
 		-webkit-border-bottom-left-radius:				$val; 
 		-khtml-border-bottom-left-radius:				$val; 
@@ -494,10 +496,21 @@
 // ----------------------------------------------
 	@mixin clear($dir){
 		@if($dir==right){
-			clear:							$right;		
+			clear:									$right;		
 		}
 		@else {
-			clear:							$left;		
+			clear:									$left;		
 		}
 	}
-	
+
+// ----------------------------------------------
+// 9-	Backgrounds:
+// 9.1- Gradient-Background:
+// ----------------------------------------------
+	@mixin gradient-background($dir,$start-color,$end-color) {
+		background-image: -webkit-linear-gradient($dir,$start-color,$end-color);
+		background-image: -moz-linear-gradient($dir,$start-color,$end-color);
+		background-image: -ms-linear-gradient($dir,$start-color,$end-color);
+		background-image: -o-linear-gradient($dir,$start-color,$end-color);
+		background-image: linear-gradient($dir,$start-color,$end-color);
+	}
